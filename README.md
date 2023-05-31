@@ -48,7 +48,12 @@ python train.py --DA --task rna2
 python train.py --DA --task rna3
 ```
 
-If you want to test bootgen without "diverse aggregation" please remove --DA. 
+To test BootGen without "diverse aggregation," simply remove the "--DA" flag.
+
+
+
+
+
 
 
 
