@@ -199,7 +199,7 @@ class RNA1Dataset(Dataset):
         x = np.load('rna_data/RNA1_x.npy')
         y = np.load('rna_data/RNA1_y.npy').reshape(-1,1)
 
-        task = DiscreteDataset(x[:5000], y[:5000],num_classes=4)
+        task = DiscreteDataset(x, y, num_classes=4)
         x = task.x
         y = task.y.reshape(-1)
         self.train, self.valid, self.train_scores, self.valid_scores  = train_test_split(x, y, test_size=0.1, random_state=self.rng)
@@ -259,7 +259,7 @@ class RNA2Dataset(Dataset):
         x = np.load('rna_data/RNA2_x.npy')
         y = np.load('rna_data/RNA2_y.npy').reshape(-1,1)
 
-        task = DiscreteDataset(x[:5000], y[:5000],num_classes=4)
+        task = DiscreteDataset(x, y, num_classes=4)
         x = task.x
         y = task.y.reshape(-1)
         self.train, self.valid, self.train_scores, self.valid_scores  = train_test_split(x, y, test_size=0.1, random_state=self.rng)
@@ -320,7 +320,7 @@ class RNA3Dataset(Dataset):
         x = np.load('rna_data/RNA3_x.npy')
         y = np.load('rna_data/RNA3_y.npy').reshape(-1,1)
 
-        task = DiscreteDataset(x[:5000], y[:5000],num_classes=4)
+        task = DiscreteDataset(x, y, num_classes=4)
         x = task.x
         y = task.y.reshape(-1)
         self.train, self.valid, self.train_scores, self.valid_scores  = train_test_split(x, y, test_size=0.1, random_state=self.rng)

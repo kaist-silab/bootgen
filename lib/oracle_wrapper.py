@@ -94,7 +94,7 @@ class RNA1Wrapper:
         x = np.load('rna_data/RNA1_x.npy')
         y = np.load('rna_data/RNA1_y.npy').reshape(-1,1)
 
-        self.task = DiscreteDataset(x[:5000], y[:5000],num_classes=4)
+        self.task = DiscreteDataset(x, y, num_classes=4)
         self.oracle = oracle
     def __call__(self, x, batch_size=256):
         scores = []
@@ -111,7 +111,7 @@ class RNA2Wrapper:
         x = np.load('rna_data/RNA2_x.npy')
         y = np.load('rna_data/RNA2_y.npy').reshape(-1,1)
 
-        self.task = DiscreteDataset(x[:5000], y[:5000],num_classes=4)
+        self.task = DiscreteDataset(x, y, num_classes=4)
         self.oracle = oracle
     def __call__(self, x, batch_size=256):
         scores = []
@@ -128,7 +128,7 @@ class RNA3Wrapper:
         x = np.load('rna_data/RNA3_x.npy')
         y = np.load('rna_data/RNA3_y.npy').reshape(-1,1)
 
-        self.task = DiscreteDataset(x[:5000], y[:5000],num_classes=4)
+        self.task = DiscreteDataset(x, y, num_classes=4)
         self.oracle = oracle
     def __call__(self, x, batch_size=256):
         scores = []
