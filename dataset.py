@@ -26,9 +26,6 @@ class SequenceDataset(torch.utils.data.Dataset):
         
     
         sequence = self.sequence_list[idx]
-        #ids = torch.randperm(len(sequence)-2)[:2] + 1
-        # similar_sequence1 = self.transform(sequence,ids[0])
-        # similar_sequence2 = self.transform(sequence,ids[1])
         return sequence 
 
     def update(self, sequence):
@@ -52,8 +49,6 @@ class ScoreDataset(torch.utils.data.Dataset):
         self.std = torch.std(self.scores)
     def __getitem__(self, idx):
         return self.scores[idx]
-        #return  self.score_list[idx]
-
 
     def update(self, scores):
         new_scores = torch.FloatTensor(scores)
@@ -83,7 +78,6 @@ class ZipDataset(torch.utils.data.Dataset):
         return [dataset[idx] for dataset in self.datasets]
 
     def collate(data_list):
-        assert(False)
         return [dataset.collate(data_list) for dataset, data_list in zip(self.datasets, zip(*data_list))]
 
 

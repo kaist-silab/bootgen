@@ -314,7 +314,7 @@ if __name__ == "__main__":
         y = np.load('rna_data/RNA1_y.npy').reshape(-1,1)
         problem = flexs.landscapes.rna.registry()['L14_RNA1']
         landscape = flexs.landscapes.RNABinding(**problem['params'])
-        task = DiscreteDataset(x[:5000], y[:5000],num_classes=4)
+        task = DiscreteDataset(x, y, num_classes=4)
         task_dataset = None 
         num_token = 4
         max_len = 14
@@ -323,7 +323,7 @@ if __name__ == "__main__":
         y = np.load('rna_data/RNA2_y.npy').reshape(-1,1)
         problem = flexs.landscapes.rna.registry()['L14_RNA2']
         landscape = flexs.landscapes.RNABinding(**problem['params'])
-        task = DiscreteDataset(x[:5000], y[:5000],num_classes=4)
+        task = DiscreteDataset(x, y, num_classes=4)
         task_dataset = None 
         num_token = 4
         max_len = 14
@@ -332,7 +332,7 @@ if __name__ == "__main__":
         y = np.load('rna_data/RNA3_y.npy').reshape(-1,1)
         problem = flexs.landscapes.rna.registry()['L14_RNA3']
         landscape = flexs.landscapes.RNABinding(**problem['params'])
-        task = DiscreteDataset(x[:5000], y[:5000],num_classes=4)
+        task = DiscreteDataset(x, y, num_classes=4)
         task_dataset = None 
         num_token = 4
         max_len = 14
