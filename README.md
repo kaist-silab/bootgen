@@ -1,3 +1,5 @@
+<div align="center">
+
 # BootGen
 
 Official code for BootGen: "Bootstrapped Training of Score-Conditioned Generator for Offline Design of Biological Sequences".
@@ -6,6 +8,8 @@ Official code for BootGen: "Bootstrapped Training of Score-Conditioned Generator
 <a href="https://pytorch.org/get-started/locally/"><img alt="PyTorch" src="https://img.shields.io/badge/PyTorch-ee4c2c?logo=pytorch&logoColor=white"></a>
 ![license](https://img.shields.io/badge/license-Apache%202.0-blue.svg?)
 
+  </div> 
+  
 ## Dependencies
 
 * Python==3.7
