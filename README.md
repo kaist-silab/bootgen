@@ -2,20 +2,23 @@
 
 Official code for BootGen: "Bootstrapped Training of Score-Conditioned Generator for Offline Design of Biological Sequences".
 
-## Dependancies
+[![arXiv](https://img.shields.io/badge/arXiv-2306.03111-b31b1b.svg)](https://arxiv.org/abs/2306.03111)
+<a href="https://pytorch.org/get-started/locally/"><img alt="PyTorch" src="https://img.shields.io/badge/PyTorch-ee4c2c?logo=pytorch&logoColor=white"></a>
+![license](https://img.shields.io/badge/license-Apache%202.0-blue.svg?)
+
+## Dependencies
 
 * Python==3.7
 
 ```bash
-$pip install flexs
-$conda install -c bioconda viennarna
-$pip install design-bench==2.0.20
-$pip install polyleven
+pip install flexs
+conda install -c bioconda viennarna
+pip install design-bench==2.0.20
+pip install polyleven
 ```
 
 
-
-### BootGen running
+### Running BootGen
 
 **GFP**
 ```bash
@@ -48,3 +51,14 @@ python train.py --DA --task rna3
 ```
 
 To test BootGen without "diverse aggregation," simply remove the "--DA" flag.
+
+### Cite us
+If you find this code useful, please cite our paper:
+```
+@article{kim2023bootstrapped,
+  title={Bootstrapped Training of Score-Conditioned Generator for Offline Design of Biological Sequences},
+  author={Kim, Minsu and Berto, Federico and Ahn, Sungsoo and Park, Jinkyoo},
+  journal={arXiv preprint arXiv:2306.03111},
+  year={2023}
+}
+```
